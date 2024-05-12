@@ -1,0 +1,25 @@
+{% extends 'base.html' %} {% block content %}
+<section>
+  <div class="ml-container form-container">
+    <div class="card shadow-lg p-3 mb-5 bg-body rounded text-center">
+      <h5 class="card-header">Welcome to Heart Disease Prediction</h5>
+      <div class="card-body">
+        <h5 class="card-title">Please enter the right information to get an accurate prediction</h5>
+        <a href="{{ url_for('Home') }}" class="btn btn-primary">Home</a>
+        <a href="{{ url_for('Index') }}" class="btn btn-info">Predict</a>
+        <a href="{{ url_for('graph') }}" class="btn btn-success">Result</a>
+      </div>
+    </div>
+    
+  </div>
+  
+</section>
+<div class="filed control">
+  <center>
+    <footer>
+      <p class="footer-description">©2024 TN </p>
+    </footer>
+  </center>
+</div>
+
+{% endblock %}

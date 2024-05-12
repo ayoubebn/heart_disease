@@ -1,0 +1,38 @@
+{% extends 'base.html' %} {% block content %}
+<section>
+  <div class="ml-container form-container">
+    <div class="results">
+      {% if prediction==1 %}
+      <h1>
+        <span class="danger">Oops!<br /><br />You have HEART DISEASE.</span>
+      </h1>
+      <img
+        class="gif"
+        src="{{ url_for('static', filename='no.webp')}}"
+        alt="HEART Image"
+      />
+      {% elif prediction==0 %}
+      <h1>
+        <span class="safe"
+          >Congratulation!<br /><br />
+          You DON'T have HEART DISEASE.</span
+        >
+      </h1>
+      <img
+        class="gif1"
+        src="{{ url_for('static', filename='yes.webp')}}"
+        alt="Not HEART Image"
+      />
+      {% endif %}
+    </div>
+    
+  </div>
+</section>
+<div class="filed control">
+  <center>
+    <footer>
+      <p class="footer-description">©2024 TN </p>
+    </footer>
+  </center>
+</div>
+{% endblock %}
